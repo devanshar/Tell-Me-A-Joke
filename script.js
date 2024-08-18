@@ -14,7 +14,7 @@ function tellMe(joke) {
   const jokeString = joke.trim().replace(/ /g, '%20');
  
   VoiceRSS.speech({
-    key: 'vars.API_KE',
+    key: vars.API_KE,
     src: jokeString,
     hl: 'en-us',
     r: 0,
@@ -26,7 +26,7 @@ function tellMe(joke) {
 async function getJokes() {
   jokeElement.innerHTML = '';
   let joke = '';
-  const apiUrl = 'https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Spooky,Christmas' ;
+  const apiUrl = 'https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit' ;
  
     // jokeElement.innerHTML = '';
   try {
