@@ -38,7 +38,7 @@ async function getJokes() {
     } else {
       joke = data.joke;
     }
-    // tellMe(joke);
+     tellMe(joke);
 
 
 const jokeArray = joke.split(" ");
