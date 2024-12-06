@@ -25,7 +25,7 @@ function tellMe(joke) {
 }
 async function getJokes() {
   jokeElement.innerHTML = '';
-  let joke = '${{secrets.KEY}}';
+  let joke = 'process.env.SECRET_KEY';
   const apiUrl = 'https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit' ;
  
     // jokeElement.innerHTML = '';
