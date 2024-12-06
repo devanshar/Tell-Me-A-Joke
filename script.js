@@ -25,7 +25,7 @@ function tellMe(joke) {
 }
 async function getJokes() {
   jokeElement.innerHTML = '';
-  let joke = '';
+  let joke = '${{secrets.KEY}}';
   const apiUrl = 'https://v2.jokeapi.dev/joke/Programming,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit' ;
  
     // jokeElement.innerHTML = '';
@@ -38,7 +38,7 @@ async function getJokes() {
     } else {
       joke = data.joke;
     }
-     // tellMe(joke);
+     tellMe(joke);
 
 
 const jokeArray = joke.split(" ");
